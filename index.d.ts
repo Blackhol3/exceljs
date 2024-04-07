@@ -1020,12 +1020,14 @@ export interface ConditionalFormattingBaseRule {
 export interface ExpressionRuleType extends ConditionalFormattingBaseRule {
 	type: 'expression';
 	formulae?: any[];
+	stopIfTrue?: boolean;
 }
 
 export interface CellIsRuleType extends ConditionalFormattingBaseRule {
 	type: 'cellIs';
 	formulae?: any[];
 	operator?: CellIsOperators;
+	stopIfTrue?: boolean;
 }
 
 export interface Top10RuleType extends ConditionalFormattingBaseRule {
@@ -1033,11 +1035,13 @@ export interface Top10RuleType extends ConditionalFormattingBaseRule {
 	rank: number;
 	percent: boolean;
 	bottom: boolean;
+	stopIfTrue?: boolean;
 }
 
 export interface AboveAverageRuleType extends ConditionalFormattingBaseRule {
 	type: 'aboveAverage';
 	aboveAverage: boolean;
+	stopIfTrue?: boolean;
 }
 
 export interface ColorScaleRuleType extends ConditionalFormattingBaseRule {
@@ -1059,11 +1063,13 @@ export interface ContainsTextRuleType extends ConditionalFormattingBaseRule {
 	type: 'containsText';
 	operator?: ContainsTextOperators;
 	text?: string;
+	stopIfTrue?: boolean;
 }
 
 export interface TimePeriodRuleType extends ConditionalFormattingBaseRule {
 	type: 'timePeriod';
 	timePeriod?: TimePeriodTypes;
+	stopIfTrue?: boolean;
 }
 
 export interface DataBarRuleType extends ConditionalFormattingBaseRule {
