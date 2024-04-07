@@ -1014,7 +1014,7 @@ export interface Cvfo {
 	value?: number;
 }
 export interface ConditionalFormattingBaseRule {
-	priority: number;
+	priority?: number;
 	style?: Partial<Style>;
 }
 export interface ExpressionRuleType extends ConditionalFormattingBaseRule {
